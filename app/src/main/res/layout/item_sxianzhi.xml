@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_marginTop="30px"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.example.administrator.noto_sanscjk.customize.ImageViewRoundOval
+                android:layout_marginLeft="35px"
+                android:src="@drawable/banner"
+                android:layout_width="86px"
+                android:layout_height="86px" />
+
+            <LinearLayout
+                android:layout_marginBottom="10px"
+                android:layout_marginTop="10px"
+                android:orientation="vertical"
+                android:layout_marginLeft="18px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/name"
+                    android:textSize="24px"
+                    android:text="柠檬橘子奥特曼"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textColor="#bfbfbf"
+                    android:textSize="24px"
+                    android:layout_marginTop="15px"
+                    android:text="在线"
+                    android:layout_marginBottom="0px"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <TextView
+            android:textColor="#ff3232"
+            android:textSize="24px"
+            android:layout_marginLeft="300px"
+            android:text="￥"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+            <TextView
+                android:textColor="#ff3232"
+                android:textSize="36px"
+                android:text="50000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginRight="25px"
+            android:layout_marginLeft="25px"
+            android:orientation="horizontal"
+            android:layout_marginTop="30px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_weight="1"
+                android:background="@drawable/banner"
+                android:layout_width="match_parent"
+                android:layout_height="293px" />
+            <ImageView
+                android:layout_marginLeft="10px"
+                android:layout_weight="1"
+                android:background="@drawable/banner"
+                android:layout_width="match_parent"
+                android:layout_height="293px" />
+            <ImageView
+                android:layout_marginLeft="10px"
+                android:layout_weight="1"
+                android:background="@drawable/banner"
+                android:layout_width="match_parent"
+                android:layout_height="293px" />
+        </LinearLayout>
+        <TextView
+            android:textSize="24px"
+            android:layout_marginTop="18px"
+            android:text="游戏笔记本，9成新，刚买不久，因家里有事，我赢江湖又有我的文档"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:layout_marginTop="30px"
+            android:layout_width="match_parent"
+            android:layout_height="3px"
+            android:background="@color/hider"></View>
+        <TextView
+
+            android:textSize="24px"
+            android:layout_marginTop="18px"
+            android:text="距离1000公里"
+            android:textColor="#5181c3"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

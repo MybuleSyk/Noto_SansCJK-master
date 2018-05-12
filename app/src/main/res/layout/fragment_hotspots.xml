@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="542px"
+            android:layout_height="63px"
+            android:layout_marginLeft="41px"
+            android:background="@drawable/sousuo" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="确认搜索"
+            android:textColor="@color/black"
+            android:textSize="24px" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60px"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="24px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="全部" />
+
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="24px"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="热门" />
+
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="24px"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="维修教学" />
+
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="24px"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="拆机自检" />
+
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="24px"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="保养窍门" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3px"
+        android:background="@color/hider"></View>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/Redainview"></android.support.v7.widget.RecyclerView>
+
+
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <LinearLayout
+        android:layout_marginLeft="15px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <com.example.administrator.noto_sanscjk.customize.ImageViewRoundOval
+        android:id="@+id/shop_img"
+        android:layout_width="150px"
+        android:layout_height="150px"
+        android:src="@drawable/banner"
+        />
+
+        <TextView
+            android:id="@+id/name"
+            android:textColor="@color/littetitle"
+            android:textSize="24px"
+            android:layout_marginTop="16px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="手机换屏"/>
+        <LinearLayout
+            android:layout_marginTop="12px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:textColor="@color/pice"
+                android:textSize="18px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="价格: "/>
+            <TextView
+                android:textColor="@color/pice"
+                android:textSize="18px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100元"/>
+
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_marginTop="18px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            
+            <ImageView
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:src="@drawable/shop"/>
+
+            <TextView
+                android:textSize="14px"
+                android:textColor="@color/littetitle"
+                android:layout_marginLeft="18px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="及达快修"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

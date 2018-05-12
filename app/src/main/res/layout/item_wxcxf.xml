@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+        <ImageView
+            android:layout_width="140px"
+            android:layout_height="140px"
+            android:layout_margin="20px"
+            android:background="@drawable/banner" />
+
+
+            <LinearLayout
+                android:layout_marginLeft="20px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="店铺："
+                    android:textColor="@color/black"
+                    android:textSize="18px" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="快修手机铺"
+                    android:textColor="@color/black"
+                    android:textSize="18px" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="23px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="维修状态："
+                    android:textColor="@color/black"
+                    android:textSize="30px" />
+
+                <TextView
+                    android:id="@+id/zhuangtai_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="维修中"
+                    android:textColor="@color/black"
+                    android:textSize="30px" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="维修说明："
+                    android:textColor="@color/black"
+                    android:textSize="30px" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="手机屏幕进水"
+                    android:textColor="@color/black"
+                    android:textSize="30px" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="21px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="上门地址："
+                    android:textColor="@color/black"
+                    android:textSize="30px" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="朝阳区朝阳街110"
+                    android:textColor="@color/black"
+                    android:textSize="30px" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginRight="24px"
+            android:gravity="right"
+            android:layout_marginTop="23px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥"
+                android:textColor="@color/pice"
+                android:textSize="24px" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="300"
+                android:textColor="@color/pice"
+                android:textSize="36px" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginTop="17px"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/hider"
+        ></View>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="57px"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="30px"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="客服帮助"/>
+
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="30px"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="维修完成"/>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

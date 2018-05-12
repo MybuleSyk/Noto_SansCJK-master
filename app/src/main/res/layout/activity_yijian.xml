@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="意见反馈"
+            android:textSize="30px" />
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_width="50px"
+            android:layout_height="50px"
+            android:src="@drawable/back"/>
+
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20px"
+        android:background="@color/hider"></View>
+
+
+        <LinearLayout
+            android:layout_margin="20px"
+            android:background="@drawable/jianyi"
+            android:layout_width="match_parent"
+            android:layout_height="448px">
+
+
+            <EditText
+                android:layout_marginTop="12px"
+                android:layout_marginLeft="22px"
+                android:layout_marginRight="22px"
+                android:cursorVisible="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                />
+        </LinearLayout>
+
+    <Button
+        android:layout_marginBottom="50px"
+        android:layout_marginTop="50px"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:text="确认提交"
+        android:layout_width="353px"
+        android:layout_height="64px"
+        android:background="@drawable/roundbut"/>
+    </LinearLayout>
+
+</LinearLayout>

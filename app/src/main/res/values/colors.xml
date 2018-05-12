@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="textcolor">#1b1b1b</color>
+    <color name="redtext">#ff4040</color>
+    <color name="hint">#bcbcbc</color>
+    <color name="code">#ff2929</color>
+    <color name="fillingbut">#ff4040</color>
+    <color name="sidebut">#ff0000</color>
+    <color name="white">#ffffff</color>
+    <color name="bottom">#c5c5c5</color>
+    <color name="black">#000000</color>
+    <color name="gray">#787878</color>
+    <color name="littetitle">#4e4e4e</color>
+    <color name="pice">#ff1818</color>
+    <color name="introduction">#d4d4d4</color>
+    <color name="hider">#f4f3f3</color>
+    <color name="day">#b1b1b1</color>
+    <color name="name">#bfbfbf</color>
+    <color name="youhui">#373737</color>
+    <color name="money">#ff0000</color>
+    <color name="dengdai">#939393</color>
+    <color name="weizhi">#7ba2ff</color>
+
+    <color name="banbai">#80FFFFFF</color>
+
+</resources>

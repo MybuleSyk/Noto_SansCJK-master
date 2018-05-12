@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150px"
+                android:layout_marginBottom="10px"
+                android:layout_marginLeft="20px"
+                android:layout_marginTop="10px"
+                android:background="@drawable/music" />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_marginTop="10px"
+                android:layout_marginRight="12px"
+                android:layout_marginLeft="12px"
+                android:layout_width="match_parent"
+                android:layout_height="121px"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:textSize="24px"
+                        android:layout_marginTop="10px"
+                        android:layout_marginLeft="10px"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="音频时长："/>
+
+                    <TextView
+                        android:textColor="@color/introduction"
+                        android:textSize="24px"
+                        android:layout_marginTop="10px"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="1分18秒"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="@color/white"
+                android:layout_marginTop="10px"
+                android:layout_marginRight="12px"
+                android:gravity="right"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:textColor="@color/pice"
+                    android:textSize="24px"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="价格:"/>
+                <TextView
+                    android:id="@+id/yuyin_text"
+                    android:textColor="@color/pice"
+                    android:textSize="24px"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0000"/>
+                <TextView
+                    android:textColor="@color/pice"
+                    android:textSize="24px"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="~"/>
+
+                <TextView
+
+                    android:textColor="@color/pice"
+                    android:textSize="24px"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0000"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_marginTop="10px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_marginLeft="20px"
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="手机："
+                android:textColor="@color/black"
+                android:textSize="24px" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="181672611"
+                android:textColor="@color/black"
+                android:textSize="24px" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginLeft="10px"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="地址："
+                android:textColor="@color/black"
+                android:textSize="24px" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="朝阳区双桥地铁站"
+                android:textColor="@color/black"
+                android:textSize="24px" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3px"
+        android:background="@color/hider"
+        android:layout_marginTop="10px"></View>
+
+    <LinearLayout
+        android:layout_marginBottom="20px"
+        android:background="@color/white"
+        android:layout_marginTop="10px"
+        android:layout_width="match_parent"
+        android:layout_height="60px"
+        android:orientation="horizontal">
+
+        <TextView
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="取消订单"/>
+
+        <TextView
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="修改订单"/>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <ImageView
+        android:layout_marginBottom="8px"
+        android:layout_marginLeft="18px"
+        android:id="@+id/tak_img"
+        android:layout_width="88px"
+        android:layout_height="88px"
+        android:src="@drawable/thecamera"/>
+
+    <ImageView
+        android:id="@+id/chahao"
+        android:layout_width="20px"
+        android:layout_height="20px"
+        android:src="@drawable/chahao"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/tak_img"
+        android:layout_alignEnd="@+id/tak_img" />
+
+
+</RelativeLayout>

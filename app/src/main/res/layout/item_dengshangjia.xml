@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            
+            <ImageView
+                android:layout_marginBottom="17px"
+                android:layout_marginTop="17px"
+                android:layout_marginLeft="17px"
+                android:background="@drawable/banner"
+                android:layout_width="279px"
+                android:layout_height="200px" />
+            
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/juli_text"
+                android:textSize="24px"
+                android:textColor="@color/black"
+                android:layout_marginTop="25px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="距离5米"/>
+
+            <LinearLayout
+                android:layout_marginTop="15px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+
+                    android:layout_width="15px"
+                    android:layout_height="15px"
+                    android:background="@drawable/star"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="15px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <TextView
+                android:textSize="24px"
+                android:textColor="@color/dengdai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="经营业务："/>
+                <TextView
+                    android:textSize="24px"
+                    android:textColor="@color/dengdai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="手机维修，屏幕更换，遥控适配"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="22px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="28px"
+                    android:layout_height="28px"
+                    android:src="@drawable/shop"/>
+
+                <TextView
+                    android:textSize="24px"
+                    android:textColor="@color/dengdai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="手机专修店"/>
+
+                <LinearLayout
+                    android:gravity="right"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    
+                    <ImageView
+                        android:src="@drawable/chat"
+                        android:layout_width="40px"
+                        android:layout_height="40px" />
+                    <ImageView
+                        android:layout_marginRight="17px"
+                        android:layout_marginLeft="15px"
+                        android:src="@drawable/chat"
+                        android:layout_width="40px"
+                        android:layout_height="40px" />
+                    
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

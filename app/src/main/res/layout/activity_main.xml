@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.example.administrator.noto_sanscjk.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+    </FrameLayout>
+
+    <RadioGroup
+        android:id="@+id/rad_group"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="8"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <RadioButton
+            android:id="@+id/rab_home"
+            style="@style/radiobutton_style"
+            android:drawableTop="@drawable/home"
+            android:text="首页"
+            android:textColor="@color/black"
+            android:textSize="21px" />
+
+        <RadioButton
+            android:id="@+id/rab_wrench"
+            style="@style/radiobutton_style"
+            android:drawableTop="@drawable/wrench"
+            android:text="维修"
+            android:textColor="@color/black"
+            android:textSize="24px" />
+
+        <RadioButton
+            android:id="@+id/rab_trading"
+            style="@style/radiobutton_style"
+            android:drawableTop="@drawable/trading"
+            android:text="闲置"
+            android:textColor="@color/black"
+            android:textSize="24px" />
+
+        <RadioButton
+            android:id="@+id/rab_hotspots"
+            style="@style/radiobutton_style"
+            android:drawableTop="@drawable/hotspot"
+            android:text="热点"
+            android:textColor="@color/black"
+            android:textSize="24px" />
+
+        <RadioButton
+            android:id="@+id/rab_person"
+            style="@style/radiobutton_style"
+            android:drawableTop="@drawable/person"
+            android:text="个人"
+            android:textColor="@color/black"
+            android:textSize="24px" />
+
+    </RadioGroup>
+</LinearLayout>

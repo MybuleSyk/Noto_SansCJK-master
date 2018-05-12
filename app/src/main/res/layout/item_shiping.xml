@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:textSize="24px"
+            android:id="@+id/shipingname"
+            android:layout_marginTop="30px"
+            android:layout_marginRight="19px"
+            android:layout_marginLeft="14px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="挖掘跨世纪,科技大厦,及哇哈客户可,嫩肯德基卡拉斯科龙三"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="349px"
+        android:orientation="vertical"
+        android:layout_marginTop="30px"
+        android:layout_marginLeft="14px"
+        android:layout_marginRight="15px">
+
+
+        <ImageView
+            android:background="@drawable/banner"
+            android:layout_width="721px"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="14px"
+            android:layout_marginTop="30px"
+            android:layout_marginBottom="30px"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <com.example.administrator.noto_sanscjk.customize.ImageViewRoundOval
+                android:src="@drawable/banner"
+                android:layout_width="30px"
+                android:layout_height="30px" />
+            <TextView
+                android:layout_marginLeft="10px"
+                android:textColor="@color/name"
+                android:textSize="18px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="爱上雕刻机"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

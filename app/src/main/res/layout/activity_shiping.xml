@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="视频维修"
+            android:textSize="30px" />
+
+        <ImageButton
+            android:background="#00000000"
+            android:id="@+id/yuyin_back"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_width="50px"
+            android:layout_height="50px"
+            android:src="@drawable/back"/>
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="13px"
+        android:background="@color/hider"></View>
+
+    <LinearLayout
+
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+
+        <RelativeLayout
+            android:background="@drawable/jianyi"
+            android:layout_width="match_parent"
+            android:layout_height="354px"
+            android:layout_marginTop="12px"
+            android:layout_marginLeft="17px"
+            android:layout_marginRight="17px"
+            android:layout_marginBottom="18px"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/banner"/>
+
+            <ImageView
+                android:layout_centerInParent="true"
+                android:src="@drawable/play"
+                android:layout_width="110px"
+                android:layout_height="110px"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="26px"
+        android:background="@color/hider"></View>
+
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textSize="28px"
+            android:textColor="@color/black"
+            android:layout_marginLeft="18px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="维修地址："/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="朝阳区双桥地铁站"
+            android:textColor="@color/black"
+            android:textSize="28px" />
+
+        <ImageView
+            android:background="@drawable/address"
+            android:layout_width="44px"
+            android:layout_height="44px"
+            android:layout_marginRight="27px"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5px"
+        android:background="@color/hider"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18px"
+            android:text="手机号码："
+            android:textColor="@color/black"
+            android:textSize="28px" />
+
+        <EditText
+            android:cursorVisible="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="27px"
+            android:background="@color/white"
+            android:hint="输入您的手机号码"
+            android:inputType="number"
+            android:maxLength="11"
+            android:textColor="@color/black"
+            android:textSize="28px" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="19px"
+        android:background="@color/hider"></View>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_weight="1"
+            android:textSize="28px"
+            android:textColor="@color/black"
+            android:layout_marginLeft="18px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="可用优惠"/>
+
+        <TextView
+            android:textSize="28px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="27px"
+            android:text="5"
+            android:textColor="@color/redtext"/>
+    </LinearLayout>
+
+
+    <Button
+        android:background="@drawable/backbutr"
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="121px"
+        android:textSize="30px"
+        android:layout_width="500px"
+        android:layout_height="74px"
+        android:text="确认发送"/>
+
+    <Button
+        android:background="@drawable/backbutr"
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50px"
+        android:textSize="30px"
+        android:layout_width="500px"
+        android:layout_height="74px"
+        android:text="重新录制"/>
+
+
+
+</LinearLayout>

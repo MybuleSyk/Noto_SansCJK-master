@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_marginTop="34px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <com.example.administrator.noto_sanscjk.customize.ImageViewRoundOval
+            android:layout_marginLeft="35px"
+            android:src="@drawable/banner"
+            android:layout_width="60px"
+            android:layout_height="50px" />
+        <LinearLayout
+            android:layout_marginBottom="10px"
+            android:layout_marginTop="10px"
+            android:orientation="vertical"
+            android:layout_marginLeft="27px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/black"
+                android:id="@+id/liuyan_name"
+                android:textSize="24px"
+                android:text="按时上课的"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textColor="@color/black"
+                android:textSize="30px"
+                android:layout_marginTop="15px"
+                android:text="打开了很不错"
+                android:layout_marginBottom="0px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:textColor="#bfbfbf"
+                android:textSize="24px"
+                android:layout_marginTop="15px"
+                android:text="2分钟前"
+                android:layout_marginBottom="0px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

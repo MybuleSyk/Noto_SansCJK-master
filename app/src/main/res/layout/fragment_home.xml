@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+
+
+
+    <com.example.administrator.noto_sanscjk.customize.ObservableScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300px"
+                android:background="@drawable/banner" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="18px"
+                android:background="@color/hider"></View>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35px"
+                android:layout_marginTop="18px"
+                android:text="附近商家，精准推送，最快上门"
+                android:textColor="@color/gray"
+                android:textSize="28px"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rad_group"
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:layout_marginTop="30px"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rab_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawableTop="@drawable/mobil"
+                    android:gravity="center"
+                    android:text="手机维修"
+                    android:textColor="@color/black"
+                    android:textSize="21px" />
+
+                <RadioButton
+                    android:id="@+id/rab_wrench"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawableTop="@drawable/appliances"
+                    android:gravity="center"
+                    android:text="家电维修"
+                    android:textColor="@color/black"
+                    android:textSize="24px" />
+
+                <RadioButton
+                    android:id="@+id/rab_trading"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawableTop="@drawable/circuit"
+                    android:gravity="center"
+                    android:text="管道路线"
+                    android:textColor="@color/black"
+                    android:textSize="24px" />
+
+                <RadioButton
+                    android:id="@+id/rab_hotspots"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawableTop="@drawable/data"
+                    android:gravity="center"
+                    android:text="数据恢复"
+                    android:textColor="@color/black"
+                    android:textSize="24px" />
+
+                <RadioButton
+                    android:id="@+id/rab_person"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawableTop="@drawable/code"
+                    android:gravity="center"
+                    android:text="办公设备"
+                    android:textColor="@color/black"
+                    android:textSize="24px" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="18px"
+                android:background="@color/hider"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="152px"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/chaxun"
+                    android:layout_width="match_parent"
+                    android:layout_height="94px"
+                    android:layout_marginLeft="35px"
+                    android:layout_marginRight="10px"
+                    android:layout_weight="1"
+                    android:background="@drawable/graybutr"
+                    android:text="维修查询"
+                    android:textColor="@color/black"
+                    android:textSize="30px" />
+
+                <Button
+                    android:id="@+id/xiadan_but"
+                    android:layout_width="match_parent"
+                    android:layout_height="94px"
+                    android:layout_marginLeft="10px"
+                    android:layout_marginRight="35px"
+                    android:layout_weight="1"
+                    android:background="@drawable/backbutr"
+                    android:text="下单维修"
+                    android:textColor="@color/white"
+                    android:textSize="30px" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="18px"
+                android:background="@color/hider"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="355px"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10px"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/img"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ad" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10px"
+                    android:layout_marginRight="10px"
+                    android:layout_marginTop="10px"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="7px"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/ad2" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="7px"
+                        android:layout_weight="1"
+                        android:background="#05f">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/ad1" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="18px"
+                android:background="@color/hider"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="301px"
+                android:orientation="horizontal"
+                android:padding="10px">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/members" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10px"
+                    android:layout_weight="1"
+                    android:background="@drawable/free" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10px"
+                    android:layout_weight="1"
+                    android:background="@drawable/check" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10px"
+                    android:layout_weight="1"
+                    android:background="@drawable/moreandmore" />
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="18px"
+                android:background="@color/hider"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="354px"
+                android:layout_marginLeft="14px"
+                android:layout_marginRight="15px"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="16px"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40px"
+                        android:layout_height="40px"
+                        android:background="@drawable/mobilephonered" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="9px"
+                        android:text="手机维修"
+                        android:textColor="@color/littetitle"
+                        android:textSize="28px" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="更多"
+                            android:textColor="@color/littetitle"
+                            android:textSize="24px" />
+
+                        <ImageView
+                            android:id="@+id/moreright"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/moreright" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10px">
+
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="354px"
+                android:layout_marginLeft="14px"
+                android:layout_marginRight="15px"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="16px"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40px"
+                        android:layout_height="40px"
+                        android:background="@drawable/theplugred" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="9px"
+                        android:text="家电维修"
+                        android:textColor="@color/littetitle"
+                        android:textSize="28px" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="更多"
+                            android:textColor="@color/littetitle"
+                            android:textSize="24px" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/moreright" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclview1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10px">
+
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="354px"
+                android:layout_marginLeft="14px"
+                android:layout_marginRight="15px"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="16px"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40px"
+                        android:layout_height="40px"
+                        android:background="@drawable/circuitorangered" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="9px"
+                        android:text="管道电路"
+                        android:textColor="@color/littetitle"
+                        android:textSize="28px" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="更多"
+                            android:textColor="@color/littetitle"
+                            android:textSize="24px" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/moreright" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclview2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10px">
+
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="354px"
+                android:layout_marginLeft="14px"
+                android:layout_marginRight="15px"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="16px"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40px"
+                        android:layout_height="40px"
+                        android:background="@drawable/dataorangred" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="9px"
+                        android:text="数据恢复"
+                        android:textColor="@color/littetitle"
+                        android:textSize="28px" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="更多"
+                            android:textColor="@color/littetitle"
+                            android:textSize="24px" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/moreright" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclview3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10px">
+
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="354px"
+                android:layout_marginLeft="14px"
+                android:layout_marginRight="15px"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="16px"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40px"
+                        android:layout_height="40px"
+                        android:background="@drawable/printerorangered" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="9px"
+                        android:text="办公设备"
+                        android:textColor="@color/littetitle"
+                        android:textSize="28px" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="更多"
+                            android:textColor="@color/littetitle"
+                            android:textSize="24px" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/moreright" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclview4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10px">
+
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="354px"
+                android:layout_marginLeft="14px"
+                android:layout_marginRight="15px"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="16px"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40px"
+                        android:layout_height="40px"
+                        android:background="@drawable/maintainred" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="9px"
+                        android:text="闲置买卖"
+                        android:textColor="@color/littetitle"
+                        android:textSize="28px" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="更多"
+                            android:textColor="@color/littetitle"
+                            android:textSize="24px" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/moreright" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclview5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10px">
+
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </com.example.administrator.noto_sanscjk.customize.ObservableScrollView>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:textSize="13sp"
+            android:layout_marginLeft="15dp"
+            android:maxLines="1"
+            android:maxEms="9"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="#000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="北京：建国路支行啊啊啊啊"/>
+
+        <EditText
+            android:cursorVisible="false"
+            android:layout_marginLeft="26px"
+            android:textSize="13sp"
+            android:layout_weight="1"
+            android:hint="搜索维修搜索商铺..."
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:background="@drawable/edsousuo"
+            />
+
+        <ImageView
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/code"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

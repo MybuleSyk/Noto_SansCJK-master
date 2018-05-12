@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250px"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <com.example.administrator.noto_sanscjk.customize.ImageViewRoundOval
+                android:layout_marginLeft="35px"
+                android:src="@drawable/banner"
+                android:layout_width="135px"
+                android:layout_height="135px" />
+
+            <LinearLayout
+                android:layout_marginLeft="20px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+            <TextView
+                android:textColor="@color/black"
+                android:textSize="30px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="用户12138"/>
+
+                <LinearLayout
+                    android:layout_marginTop="20px"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:textColor="@color/introduction"
+                        android:textSize="18px"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="简介："/>
+
+                    <TextView
+                        android:textColor="@color/introduction"
+                        android:textSize="18px"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="这个人很懒什么都没有留下"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:gravity="right"
+                android:layout_marginRight="43px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/pice"
+                    android:textSize="36px"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0000.00"/>
+
+                <TextView
+                    android:textColor="@color/pice"
+                    android:textSize="24px"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="元"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/hint"></View>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_marginLeft="38px"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:orientation="horizontal">
+        
+        <ImageView
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:src="@drawable/signin"/>
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="30px"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="签到中心"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="38px"
+        android:background="@color/hider"></View>
+
+    <LinearLayout
+        android:id="@+id/personal"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="38px"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:src="@drawable/personal"/>
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="30px"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="个人资料"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/hider"></View>
+    <LinearLayout
+        android:id="@+id/repairlist"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="38px"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:src="@drawable/listing"/>
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="30px"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="维修清单"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/hider"></View>
+    <LinearLayout
+        android:id="@+id/Xianzhilist"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="38px"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:src="@drawable/idle1"/>
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="30px"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="闲置清单"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/hider"></View>
+    <LinearLayout
+        android:id="@+id/address"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="38px"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:src="@drawable/address"/>
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="30px"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="地址管理"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/hider"></View>
+    <LinearLayout
+        android:id="@+id/youhuilist"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="38px"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:src="@drawable/welfare"/>
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="30px"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的福利"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/hider"></View>
+    <LinearLayout
+        android:id="@+id/chongzhilist"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="38px"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:src="@drawable/bankcard"/>
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="30px"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="充值提现"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="76px"
+        android:background="@color/hider"></View>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_marginLeft="38px"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:src="@drawable/tojoinin"/>
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="30px"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="合作加盟"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/hider"></View>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_marginLeft="38px"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:src="@drawable/customerservice"/>
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="30px"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的客服"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/hider"></View>
+    <LinearLayout
+        android:id="@+id/yijianlist"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="38px"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:src="@drawable/feedback"/>
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="30px"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="意见反馈"/>
+
+    </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="90px"
+                android:background="@color/hider"></View>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

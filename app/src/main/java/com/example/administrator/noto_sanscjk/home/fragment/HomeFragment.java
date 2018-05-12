@@ -15,7 +15,6 @@ import com.example.administrator.noto_sanscjk.customize.ObservableScrollView;
 import com.example.administrator.noto_sanscjk.home.activity.WXchaxunActivity;
 import com.example.administrator.noto_sanscjk.home.adapter.HomeRcycyAdapter;
 import com.example.administrator.noto_sanscjk.home.bean.Recyc;
-import com.example.administrator.noto_sanscjk.wrench.WrenchFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +24,6 @@ import java.util.List;
  */
 
 public class HomeFragment extends BaseFragment{
-
 
     private RecyclerView mobilephoneview;
     private RecyclerView theplugredview;
@@ -40,6 +38,8 @@ public class HomeFragment extends BaseFragment{
     private LinearLayout line;
     private ObservableScrollView scrollView;
     private int imageHeight=300; //设置渐变高度，一般为导航图片高度，自己控制
+    private OnButtonClick onButtonClick;//2、定义接口成员变量
+
 
     @Override
     protected void initview() {
@@ -65,7 +65,7 @@ public class HomeFragment extends BaseFragment{
     @Override
     protected View initlayout() {
 
-        View inflate = View.inflate(getActivity(), R.layout.fragment_home, null);
+        final View inflate = View.inflate(getActivity(), R.layout.fragment_home, null);
 
         mobilephoneview = inflate.findViewById(R.id.recyclview);
         theplugredview = inflate.findViewById(R.id.recyclview1);
@@ -138,8 +138,11 @@ public class HomeFragment extends BaseFragment{
             @Override
             public void onClick(View v) {
 
-                // TODO: 2018/5/3 这里fragment跳转到fragment
-                IntentUtil.intentToNull(getActivity(), WrenchFragment.class);
+
+//4、如果接口成员变量不为空null，则调用接口变量的方法。
+                if(onButtonClick!=null){
+                    onButtonClick.onClick(xiadan_but);
+                }
 
             }
         });
@@ -162,4 +165,18 @@ public class HomeFragment extends BaseFragment{
     protected void restartdata() {
 
     }
+
+    //定义接口变量的get方法
+    public OnButtonClick getOnButtonClick() {
+        return onButtonClick;
+    }
+    //定义接口变量的set方法
+    public void setOnButtonClick(OnButtonClick onButtonClick) {
+        this.onButtonClick = onButtonClick;
+    }
+    //1、定义接口
+    public interface OnButtonClick{
+        public void onClick(View view);
+    }
+
 }

@@ -38,19 +38,43 @@ public class MainActivity extends BaseActivity{
 
         rad_group.setVisibility(View.VISIBLE);
 
+
     }
 
     public void initData() {
 
         FragmentManager supportFragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = supportFragmentManager.beginTransaction();
+         FragmentTransaction fragmentTransaction = supportFragmentManager.beginTransaction();
 
         homeFragment=new HomeFragment();
+
+
         fragmentTransaction.add(R.id.frame_layout,homeFragment);
 
         fragmentTransaction.show(homeFragment);
 
         fragmentTransaction.commit();
+
+        homeFragment.setOnButtonClick(new HomeFragment.OnButtonClick() {
+            @Override
+            public void onClick(View view) {
+
+                FragmentManager supportFragmentManager = getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = supportFragmentManager.beginTransaction();
+
+                if (homeFragment != null) {
+                    fragmentTransaction.hide(homeFragment);
+
+                }
+
+                wrenchFragment=new WrenchFragment();
+
+                rad_group.setVisibility(View.GONE);
+                fragmentTransaction.add(R.id.frame_layout,wrenchFragment).commit();
+
+            }
+        });
+
 
 
     }
@@ -151,6 +175,9 @@ public class MainActivity extends BaseActivity{
 
             }
         });
+
+
+
     }
 
     private void hideAll(FragmentTransaction transaction){

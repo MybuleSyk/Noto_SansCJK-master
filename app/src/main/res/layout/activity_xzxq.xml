@@ -221,6 +221,7 @@
                 android:orientation="horizontal">
 
             <ImageView
+                android:layout_gravity="center"
                 android:layout_marginLeft="75px"
                 android:layout_width="27px"
                 android:layout_height="27px"

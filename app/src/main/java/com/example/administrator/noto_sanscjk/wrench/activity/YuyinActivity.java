@@ -377,6 +377,7 @@ public class YuyinActivity extends BaseActivity implements View.OnClickListener 
     public void networkneed(){
 
 
+        Log.e("TAG","hahahh");
 
 
     }

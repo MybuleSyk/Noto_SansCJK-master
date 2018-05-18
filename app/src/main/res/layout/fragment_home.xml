@@ -297,6 +297,7 @@
                         android:orientation="horizontal">
 
                         <TextView
+                            android:id="@+id/duo_1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="更多"
@@ -358,6 +359,7 @@
                         android:orientation="horizontal">
 
                         <TextView
+                            android:id="@+id/duo_2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="更多"
@@ -418,6 +420,7 @@
                         android:orientation="horizontal">
 
                         <TextView
+                            android:id="@+id/duo_3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="更多"
@@ -478,6 +481,7 @@
                         android:orientation="horizontal">
 
                         <TextView
+                            android:id="@+id/duo_4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="更多"
@@ -537,6 +541,7 @@
                         android:orientation="horizontal">
 
                         <TextView
+                            android:id="@+id/duo_5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="更多"
@@ -597,6 +602,7 @@
                         android:orientation="horizontal">
 
                         <TextView
+                            android:id="@+id/duo_6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="更多"

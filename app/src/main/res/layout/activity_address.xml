@@ -46,9 +46,10 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="98px"
-            android:background="@color/white"></LinearLayout>
+            ></LinearLayout>
     </LinearLayout>
     <Button
+        android:id="@+id/add_but"
         android:layout_alignParentBottom="true"
         android:textSize="30px"
         android:background="@color/code"

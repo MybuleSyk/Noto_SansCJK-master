@@ -38,6 +38,7 @@ dependencies {
     compile 'com.github.bumptech.glide:glide:3.7.0'
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:design:26.0.0-alpha1'
+    compile 'com.contrarywind:Android-PickerView:3.2.5'
     compile 'com.lovedise:permissiongen:0.0.6'
     compile files('libs/Msc.jar')
     compile files('libs/Sunflower.jar')

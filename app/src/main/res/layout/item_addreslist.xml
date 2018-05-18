@@ -18,6 +18,7 @@
 
 
             <TextView
+                android:id="@+id/consignee"
                 android:textSize="28px"
                 android:textColor="@color/black"
                 android:layout_marginLeft="27px"
@@ -26,6 +27,7 @@
                 android:text="钢铁军团"
                 />
             <TextView
+                android:id="@+id/mobile"
                 android:layout_marginRight="27px"
                 android:gravity="right"
                 android:textSize="28px"
@@ -61,6 +63,7 @@
         >
 
         <CheckBox
+            android:id="@+id/select"
             android:gravity="center"
             android:layout_marginLeft="27px"
             android:textColor="@color/black"
@@ -75,22 +78,36 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
-            
-            <ImageView
-                android:layout_gravity="center"
-                android:layout_width="35px"
-                android:layout_height="35px"
-                android:src="@drawable/theeditor"/>
-            <TextView
-                android:layout_marginLeft="10px"
-                android:layout_gravity="center"
+
+
+            <LinearLayout
+                android:id="@+id/sub_address"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="编辑"
-                />
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="35px"
+                    android:layout_height="35px"
+                    android:src="@drawable/theeditor"/>
+                <TextView
+                    android:layout_marginLeft="10px"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="编辑"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/delete"
+                android:layout_marginLeft="45px"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
 
             <ImageView
-                android:layout_marginLeft="45px"
                 android:layout_gravity="center"
                 android:layout_width="35px"
                 android:layout_height="35px"
@@ -103,6 +120,9 @@
                 android:layout_height="wrap_content"
                 android:text="删除"
                 />
+
+
+            </LinearLayout>
             
         </LinearLayout>
 

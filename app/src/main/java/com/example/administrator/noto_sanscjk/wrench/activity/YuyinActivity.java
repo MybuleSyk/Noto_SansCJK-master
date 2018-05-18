@@ -14,23 +14,20 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.administrator.noto_sanscjk.customize.IntentUtil;
 import com.example.administrator.noto_sanscjk.MainActivity;
 import com.example.administrator.noto_sanscjk.R;
 import com.example.administrator.noto_sanscjk.base.BaseActivity;
+import com.example.administrator.noto_sanscjk.customize.IntentUtil;
 import com.example.administrator.noto_sanscjk.yuyin.IatSettings;
 import com.example.administrator.noto_sanscjk.yuyin.JsonParser;
 import com.iflytek.cloud.ErrorCode;
 import com.iflytek.cloud.InitListener;
 import com.iflytek.cloud.RecognizerListener;
 import com.iflytek.cloud.RecognizerResult;
-import com.iflytek.cloud.SpeakerVerifier;
 import com.iflytek.cloud.SpeechConstant;
 import com.iflytek.cloud.SpeechError;
 import com.iflytek.cloud.SpeechRecognizer;
 import com.iflytek.cloud.SpeechUtility;
-import com.iflytek.cloud.VerifierListener;
-import com.iflytek.cloud.VerifierResult;
 import com.iflytek.cloud.ui.RecognizerDialog;
 import com.iflytek.cloud.ui.RecognizerDialogListener;
 import com.iflytek.sunflower.FlowerCollector;
@@ -377,5 +374,11 @@ public class YuyinActivity extends BaseActivity implements View.OnClickListener 
         }
     };
 
+    public void networkneed(){
+
+
+
+
+    }
 
 }

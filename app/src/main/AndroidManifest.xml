@@ -39,16 +39,16 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
 
         </activity>
 
         <activity android:name=".login.LoginActivity">
 
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
 
@@ -71,6 +71,9 @@
             ></activity>
         <activity android:name=".home.activity.WXchaxunActivity"></activity>
 
+        <activity android:name=".home.activity.ShoplistActivity"></activity>
+        <activity android:name=".home.activity.ShopXXActivity"></activity>
+        <activity android:name=".person.activity.AddAddressActivity"></activity>
     </application>
     <meta-data android:name="design_width" android:value="768">
     </meta-data>

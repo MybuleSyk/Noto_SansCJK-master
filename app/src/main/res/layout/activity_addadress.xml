@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="50px"
+            android:layout_height="50px"
+            android:src="@drawable/back"/>
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="地址管理"
+            android:textSize="30px" />
+
+        <TextView
+            android:id="@+id/save_but"
+            android:textSize="30px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="保存"
+            android:layout_marginRight="20px"/>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/hider"
+        ></View>
+
+    <LinearLayout
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textSize="30px"
+            android:layout_marginLeft="15px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="联系人"/>
+
+        <EditText
+            android:id="@+id/contact"
+            android:layout_marginLeft="30px"
+            android:textSize="30px"
+            android:hint="请填写联系人"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:textSize="30px"
+            android:layout_marginLeft="15px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="手机号"/>
+
+        <EditText
+            android:id="@+id/mobile"
+            android:layout_marginLeft="30px"
+            android:textSize="30px"
+            android:hint="请填写手机号码"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/province"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:textSize="30px"
+            android:layout_marginLeft="15px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="所在城市/地区"/>
+
+        <TextView
+            android:id="@+id/city"
+            android:layout_marginLeft="30px"
+            android:textSize="30px"
+            android:hint="请选择城市"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:textSize="30px"
+            android:layout_marginLeft="15px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="详细地址"/>
+
+        <EditText
+            android:id="@+id/address"
+            android:layout_marginLeft="30px"
+            android:textSize="30px"
+            android:hint="请填写详细地址"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

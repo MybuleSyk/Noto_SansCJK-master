@@ -1,11 +1,14 @@
 package com.example.administrator.noto_sanscjk.login;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.administrator.noto_sanscjk.MainActivity;
 import com.example.administrator.noto_sanscjk.R;
 import com.example.administrator.noto_sanscjk.base.BaseActivity;
 import com.example.administrator.noto_sanscjk.login.bean.Login;
@@ -49,6 +52,28 @@ public class LoginActivity extends BaseActivity {
         password = findViewById(R.id.password);
         getcode = findViewById(R.id.getcode);
 
+        SharedPreferences loginshare = getSharedPreferences("login", MODE_PRIVATE);
+
+        String token = loginshare.getString("token", "");
+
+        String id = loginshare.getString("id", "");
+
+
+        Log.e("TAG",token+"======"+id);
+
+
+        if (!token.equals("")) {
+
+            Intent intent=new Intent(LoginActivity.this, MainActivity.class);
+            intent.putExtra("token",token);
+
+            intent.putExtra("id",id);
+            startActivity(intent);
+
+            finish();
+
+        }
+
     }
 
     @Override
@@ -89,13 +114,7 @@ public class LoginActivity extends BaseActivity {
                                 @Override
                                 public void run() {
 
-                                    Log.e("TAG",string);
-// TODO: 2018/5/4 这里的bean类不对 重新的接口
-//                                    Gson gson=new Gson();
-//                                    Login login = gson.fromJson(string, Login.class);
-//
-//                                    loginbean=login;
-////                                    Log.e("TAG",loginbean.getCode()+"");
+
                                 }
                             });
                         }
@@ -115,11 +134,9 @@ public class LoginActivity extends BaseActivity {
                 String url="http://api.xfg666.com//index.php/user/login";
 
                 getCode = password.getText().toString().trim();
-                String username = name.getText().toString().trim();
+                final String username = name.getText().toString().trim();
                 if (!username.equals("")&&!getCode.equals("")) {
-                    int code = loginbean.getCode();
-                    Log.e("TAG",code+"");
-                    int edcode = Integer.parseInt(getCode);
+                    final int edcode = Integer.parseInt(getCode);
 //                    if (edcode== code) {
                         Toast.makeText(LoginActivity.this, "==="+getCode, Toast.LENGTH_SHORT).show();
 
@@ -147,8 +164,43 @@ public class LoginActivity extends BaseActivity {
                                 runOnUiThread(new Runnable() {
                                     @Override
                                     public void run() {
+                                        Log.e("TAG",string);
 
-                                        Log.e("TAG",string+"==============");
+                                        Gson gson=new Gson();
+                                        Login login = gson.fromJson(string, Login.class);
+
+                                        loginbean=login;
+
+                                        if (loginbean.getError_code() == 200) {
+
+                                            Toast.makeText(LoginActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
+
+                                            SharedPreferences loginshare = getSharedPreferences("login", MODE_PRIVATE);
+
+                                            SharedPreferences.Editor edit = loginshare.edit();
+
+                                            edit.putString("token",loginbean.getData().getUserToken());
+                                            edit.putString("id",loginbean.getData().getUserid());
+
+                                            edit.commit();
+
+                                            Intent intent=new Intent(LoginActivity.this, MainActivity.class);
+
+
+                                            Toast.makeText(LoginActivity.this,loginbean.getData().getUsertoken(), Toast.LENGTH_SHORT).show();
+
+                                            intent.putExtra("token",loginbean.getData().getUserToken());
+
+                                            intent.putExtra("id",loginbean.getData().getUserid());
+                                            startActivity(intent);
+
+
+
+                                              }else if (loginbean.getError_code()==100){
+
+                                            Toast.makeText(LoginActivity.this, "验证码错误", Toast.LENGTH_SHORT).show();
+
+                                        }
 
                                     }
                                 });
@@ -170,5 +222,6 @@ public class LoginActivity extends BaseActivity {
 });
 
     }
+
 
 }

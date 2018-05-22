@@ -62,15 +62,31 @@
         android:orientation="horizontal"
         >
 
-        <CheckBox
-            android:id="@+id/select"
+        <LinearLayout
             android:gravity="center"
-            android:layout_marginLeft="27px"
-            android:textColor="@color/black"
-            android:textSize="28px"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="设为默认"/>
+            android:orientation="horizontal">
+
+
+            <Button
+                android:gravity="center"
+                android:layout_marginLeft="27px"
+                android:id="@+id/select"
+                android:layout_width="30px"
+                android:layout_height="30px"
+                android:background="@drawable/frame_f"/>
+
+            <TextView
+                android:layout_marginLeft="10px"
+                android:textColor="@color/black"
+                android:textSize="28px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="设为默认"/>
+
+        </LinearLayout>
+
         
         
         <LinearLayout

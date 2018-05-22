@@ -8,18 +8,14 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.Toast;
 import com.example.administrator.noto_sanscjk.R;
 import com.example.administrator.noto_sanscjk.base.BaseActivity;
 import com.example.administrator.noto_sanscjk.customize.LQRPhotoSelectUtils;
 import com.example.administrator.noto_sanscjk.wrench.bean.Img;
-
 import java.io.File;
 import java.util.ArrayList;
-
 import kr.co.namee.permissiongen.PermissionFail;
 import kr.co.namee.permissiongen.PermissionGen;
 import kr.co.namee.permissiongen.PermissionSuccess;
@@ -84,7 +80,6 @@ public class TakeptoActivity extends BaseActivity{
                 );
             }
         });
-
     }
 
     private void init() {

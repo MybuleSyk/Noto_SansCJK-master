@@ -6,18 +6,17 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
-import com.bumptech.glide.Glide;
-import com.example.administrator.noto_sanscjk.customize.IntentUtil;
+
 import com.example.administrator.noto_sanscjk.MainActivity;
 import com.example.administrator.noto_sanscjk.R;
 import com.example.administrator.noto_sanscjk.base.BaseActivity;
+import com.example.administrator.noto_sanscjk.customize.IntentUtil;
 import com.example.administrator.noto_sanscjk.wrench.adapter.RecycImgAdapter;
 import com.example.administrator.noto_sanscjk.wrench.bean.Img;
+
 import java.util.ArrayList;
 
 /**
@@ -33,6 +32,7 @@ public class TuwenAcitity extends BaseActivity{
     private ArrayList<Img> imgs=new ArrayList<Img>();
     private RecycImgAdapter adapter;
     private ImageView wu_img;
+    private String url="http://api.xfg666.com/index.php/user/user_need";
 
     @Override
     protected int intiLayout() {
@@ -88,10 +88,8 @@ public class TuwenAcitity extends BaseActivity{
 
                     wu_img.setVisibility(View.VISIBLE);
                 }
-
             }
         });
-
     }
 
     @Override
@@ -168,7 +166,6 @@ public class TuwenAcitity extends BaseActivity{
             }else {
                 adapter.notifyDataSetChanged();
             }
-
         }
     }
 

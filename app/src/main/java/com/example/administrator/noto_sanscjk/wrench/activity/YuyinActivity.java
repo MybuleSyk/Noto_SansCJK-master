@@ -11,6 +11,7 @@ import android.support.v4.app.ActivityCompat;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -35,8 +36,17 @@ import com.iflytek.sunflower.FlowerCollector;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
+
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.FormBody;
+import okhttp3.Interceptor;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
 /**
  * Created by Administrator on 2018/5/3.
@@ -47,18 +57,18 @@ public class YuyinActivity extends BaseActivity implements View.OnClickListener 
     private static final String TAG = YuyinActivity.class.getSimpleName();
     private EditText mResultText;
     private Toast mToast;
+    private EditText mMobile;
     // 语音听写对象
     private SpeechRecognizer mIat;
     // 语音听写UI
     private RecognizerDialog mIatDialog;
     // 用HashMap存储听写结果
     private HashMap<String, String> mIatResults = new LinkedHashMap<String, String>();
-
     private SharedPreferences mSharedPreferences;
     private boolean mTranslateEnable = false;
-
     // 引擎类型
     private String mEngineType = SpeechConstant.TYPE_CLOUD;
+    private Button yuyin_but;
 
 
     @Override
@@ -75,7 +85,6 @@ public class YuyinActivity extends BaseActivity implements View.OnClickListener 
         findViewById(R.id.yuyin_back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
 
                 IntentUtil.intentToNull(YuyinActivity.this, MainActivity.class);
 
@@ -98,6 +107,9 @@ public class YuyinActivity extends BaseActivity implements View.OnClickListener 
         //开始
         findViewById(R.id.iat_recognize).setOnClickListener(YuyinActivity.this);
 
+        mMobile=findViewById(R.id.mobile);
+        yuyin_but=findViewById(R.id.yuyin_but);
+
     }
     int ret = 0; // 函数调用返回值
     @Override
@@ -107,6 +119,16 @@ public class YuyinActivity extends BaseActivity implements View.OnClickListener 
 
     @Override
     public void initListener() {
+
+
+        yuyin_but.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                networkneed();
+
+            }
+        });
 
     }
 
@@ -145,8 +167,8 @@ public class YuyinActivity extends BaseActivity implements View.OnClickListener 
                         showTip(getString(R.string.text_begin));
                     }
                 }
-                break;
 
+                break;
         }
     }
     private void requestPermissions() {
@@ -251,7 +273,6 @@ public class YuyinActivity extends BaseActivity implements View.OnClickListener 
             }else{
                 printResult(results);
             }
-
         }
 
         /**
@@ -376,10 +397,56 @@ public class YuyinActivity extends BaseActivity implements View.OnClickListener 
 
     public void networkneed(){
 
+        SharedPreferences loginshare =getSharedPreferences("login", MODE_PRIVATE);
 
-        Log.e("TAG","hahahh");
+       final String token = loginshare.getString("token", "");
 
+        String userid = loginshare.getString("id", "");
 
+        String content = mResultText.getText().toString().trim();
+
+        String number = mMobile.getText().toString().trim();
+
+        String url="http://api.xfg666.com/index.php/user/user_need";
+
+        OkHttpClient client=new OkHttpClient.Builder()
+                .addInterceptor(new Interceptor() {
+                    @Override
+                    public Response intercept(Chain chain) throws IOException {
+
+                        Request request = chain.request()
+                                .newBuilder()
+                                .addHeader("usertoken", token)
+                                .build();
+
+                        return chain.proceed(request);
+                    }
+                }).build();
+
+        FormBody from=new FormBody.Builder()
+                .add("userid", userid)
+                .add("type","2")
+                .add("content",content)
+                .add("mobile",number)
+                .build();
+        Request request=new Request.Builder().url(url)
+                .post(from)
+                .build();
+
+        client.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+
+                Log.e("TAG","失败");
+
+            }
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+
+                Log.e("TAG","成功");
+
+            }
+        });
     }
 
 }

@@ -20,7 +20,6 @@ import com.example.administrator.noto_sanscjk.person.activity.YouhuiActivity;
 
 public class PersonFragment extends BaseFragment {
 
-
     private LinearLayout personal;
     private LinearLayout address;
     private LinearLayout repairlist;
@@ -125,8 +124,6 @@ public class PersonFragment extends BaseFragment {
 
             }
         });
-
-
 
         return inflate;
     }

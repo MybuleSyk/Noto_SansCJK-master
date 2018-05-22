@@ -4,7 +4,6 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.ListView;
 
 import com.example.administrator.noto_sanscjk.R;
 import com.example.administrator.noto_sanscjk.base.BaseActivity;
@@ -79,7 +78,6 @@ public class DengdaiActivity extends BaseActivity {
 
 /*
 * 解决了和ScrollView的滑动冲突
-*
 * */
         dengdai_listview.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -102,7 +100,6 @@ public class DengdaiActivity extends BaseActivity {
 
     @Override
     public void initData() {
-
 
     }
 

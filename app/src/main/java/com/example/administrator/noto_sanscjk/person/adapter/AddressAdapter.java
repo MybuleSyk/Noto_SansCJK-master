@@ -1,13 +1,12 @@
 package com.example.administrator.noto_sanscjk.person.adapter;
 
-import android.content.Context;
+import android.app.Activity;
 import android.content.SharedPreferences;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -31,15 +30,16 @@ import static android.content.Context.MODE_PRIVATE;
  * Created by Administrator on 2018/4/26.
  */
 
-public class AddressAdapter extends BaseAdapter{
+public class AddressAdapter extends BaseAdapter {
 
-    private Context context;
+    private Activity context;
     private List<Address.DataBean.ListBean> list;
     private ViewHolder holder;
     private String token;
     private String userid;
+    private int tempPosition = -1;  //记录已经点击的CheckBox的位置
 
-    public AddressAdapter(Context context, List<Address.DataBean.ListBean> list) {
+    public AddressAdapter(Activity context, List<Address.DataBean.ListBean> list) {
         this.context = context;
         this.list = list;
     }
@@ -67,23 +67,23 @@ public class AddressAdapter extends BaseAdapter{
 
             holder = new ViewHolder();
 
-             convertView = View.inflate(context, R.layout.item_addreslist, null);
+            convertView = View.inflate(context, R.layout.item_addreslist, null);
 
-            holder.consignee=convertView.findViewById(R.id.consignee);
+            holder.consignee = convertView.findViewById(R.id.consignee);
 
-            holder.mobile=convertView.findViewById(R.id.mobile);
+            holder.mobile = convertView.findViewById(R.id.mobile);
 
-            holder.adressname=convertView.findViewById(R.id.adressname);
+            holder.adressname = convertView.findViewById(R.id.adressname);
 
-            holder.delete=convertView.findViewById(R.id.delete);
+            holder.delete = convertView.findViewById(R.id.delete);
 
-            holder.sub_address=convertView.findViewById(R.id.sub_address);
+            holder.sub_address = convertView.findViewById(R.id.sub_address);
 
-            holder.select=convertView.findViewById(R.id.select);
+            holder.select = convertView.findViewById(R.id.select);
 
             convertView.setTag(holder);
 
-        }else {
+        } else {
 
             holder = (ViewHolder) convertView.getTag();
         }
@@ -95,32 +95,33 @@ public class AddressAdapter extends BaseAdapter{
         holder.adressname.setText(list.get(position).getAddress());
 
 
-        String is_select = list.get(position).getIs_select();
-
+        final String is_select = list.get(position).getIs_select();
 
         if (is_select.equals("1")) {
 
-            holder.select.setChecked(true);
+            holder.select.setBackgroundResource(R.drawable.frame_t);
 
-        }else {
+        } else {
 
-            holder.select.setChecked(false);
+            holder.select.setBackgroundResource(R.drawable.frame_f);
 
         }
 
 
-        holder.select.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        holder.select.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+            public void onClick(View view) {
 
-                if (b) {
+                Log.e("TAG", position + "===");
 
-                    httpselect(list.get(position).getAddress_id());
-                }
+                holder.select.setBackgroundResource(R.drawable.frame_t);
+
+                httpselect(list.get(position).getAddress_id());
+
+                notifyDataSetChanged();
 
             }
         });
-
 
         holder.delete.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -151,7 +152,6 @@ public class AddressAdapter extends BaseAdapter{
 //                intent.putExtra("province",list.get(position).getProvince());
 //                intent.putExtra("city",list.get(position).getCity());
 //                intent.putExtra("distreet",list.get(position).getDistreet());
-//
 //                context.startActivity(intent);
 //
 //            }
@@ -160,17 +160,17 @@ public class AddressAdapter extends BaseAdapter{
         return convertView;
     }
 
-    static class ViewHolder{
+    static class ViewHolder {
 
-        TextView consignee,mobile,adressname;
+        TextView consignee, mobile, adressname;
 
-        LinearLayout delete,sub_address;
+        LinearLayout delete, sub_address;
 
-        CheckBox select;
+        Button select;
 
     }
 
-    public void httpDelet(String addressid){
+    public void httpDelet(String addressid) {
 
         SharedPreferences loginshare = context.getSharedPreferences("login", MODE_PRIVATE);
 
@@ -179,9 +179,9 @@ public class AddressAdapter extends BaseAdapter{
         userid = loginshare.getString("id", "");
 
 
-        String url="http://api.xfg666.com/index.php/user/address_del";
+        String url = "http://api.xfg666.com/index.php/user/address_del";
 
-        OkHttpClient client=new OkHttpClient.Builder()
+        OkHttpClient client = new OkHttpClient.Builder()
                 .addInterceptor(new Interceptor() {
                     @Override
                     public Response intercept(Chain chain) throws IOException {
@@ -195,11 +195,11 @@ public class AddressAdapter extends BaseAdapter{
                     }
                 }).build();
 
-        FormBody from=new FormBody.Builder()
+        FormBody from = new FormBody.Builder()
                 .add("userid", userid)
-                .add("address_id",addressid)
+                .add("address_id", addressid)
                 .build();
-        Request request=new Request.Builder().url(url)
+        Request request = new Request.Builder().url(url)
                 .post(from)
                 .build();
 
@@ -214,12 +214,12 @@ public class AddressAdapter extends BaseAdapter{
 
                 final String string = response.body().string();
 
-                Log.e("TAG",string);
+                Log.e("TAG", string);
             }
         });
     }
 
-    public void httpselect(String address_id){
+    public void httpselect(String address_id) {
 
 
         SharedPreferences loginshare = context.getSharedPreferences("login", MODE_PRIVATE);
@@ -228,9 +228,9 @@ public class AddressAdapter extends BaseAdapter{
 
         userid = loginshare.getString("id", "");
 
-        String url="http://api.xfg666.com/index.php/user/address_select";
+        String url = "http://api.xfg666.com/index.php/user/address_select";
 
-        OkHttpClient client=new OkHttpClient.Builder()
+        OkHttpClient client = new OkHttpClient.Builder()
                 .addInterceptor(new Interceptor() {
                     @Override
                     public Response intercept(Chain chain) throws IOException {
@@ -244,11 +244,11 @@ public class AddressAdapter extends BaseAdapter{
                     }
                 }).build();
 
-        FormBody from=new FormBody.Builder()
-                .add("userid",userid)
-                .add("address_id",address_id)
+        FormBody from = new FormBody.Builder()
+                .add("userid", userid)
+                .add("address_id", address_id)
                 .build();
-        Request request=new Request.Builder().url(url)
+        Request request = new Request.Builder().url(url)
                 .post(from)
                 .build();
 
@@ -256,7 +256,7 @@ public class AddressAdapter extends BaseAdapter{
             @Override
             public void onFailure(Call call, IOException e) {
 
-                Log.e("TAG","设为默认地址失败！");
+                Log.e("TAG", "设为默认地址失败！");
 
             }
 
@@ -264,13 +264,17 @@ public class AddressAdapter extends BaseAdapter{
             public void onResponse(Call call, Response response) throws IOException {
 
 
-                Log.e("TAG","设为默认地址成功！");
+                String string = response.body().string();
+
+                Log.e("TAG", "设为默认地址成功！" + string);
 
             }
         });
-
-
     }
 
+    //返回当前CheckBox选中的位置,便于获取值.
+    public int getSelectPosition() {
+        return tempPosition;
+    }
 
 }

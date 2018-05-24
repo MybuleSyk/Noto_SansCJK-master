@@ -38,49 +38,49 @@
         android:orientation="horizontal">
 
         <TextView
-            android:textColor="@color/black"
-            android:textSize="24px"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="全部" />
+            android:text="全部"
+            android:textColor="@color/black"
+            android:textSize="24px" />
 
         <TextView
-            android:textColor="@color/black"
-            android:textSize="24px"
-            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="热门" />
+            android:gravity="center"
+            android:text="热门"
+            android:textColor="@color/black"
+            android:textSize="24px" />
 
         <TextView
-            android:textColor="@color/black"
-            android:textSize="24px"
-            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="维修教学" />
+            android:gravity="center"
+            android:text="维修教学"
+            android:textColor="@color/black"
+            android:textSize="24px" />
 
         <TextView
-            android:textColor="@color/black"
-            android:textSize="24px"
-            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="拆机自检" />
+            android:gravity="center"
+            android:text="拆机自检"
+            android:textColor="@color/black"
+            android:textSize="24px" />
 
         <TextView
-            android:textColor="@color/black"
-            android:textSize="24px"
-            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="保养窍门" />
+            android:gravity="center"
+            android:text="保养窍门"
+            android:textColor="@color/black"
+            android:textSize="24px" />
 
     </LinearLayout>
 
@@ -90,9 +90,9 @@
         android:background="@color/hider"></View>
 
     <android.support.v7.widget.RecyclerView
+        android:id="@+id/Redainview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/Redainview"></android.support.v7.widget.RecyclerView>
+        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
 
 
 </LinearLayout>

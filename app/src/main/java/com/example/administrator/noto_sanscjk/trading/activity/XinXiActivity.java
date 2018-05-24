@@ -5,7 +5,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.widget.FrameLayout;
 import android.widget.RadioGroup;
-import android.widget.Toast;
 
 import com.example.administrator.noto_sanscjk.R;
 import com.example.administrator.noto_sanscjk.base.BaseActivity;
@@ -39,8 +38,8 @@ public class XinXiActivity extends BaseActivity {
         FragmentManager supportFragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = supportFragmentManager.beginTransaction();
 
-        gouMaiFragment=new GouMaiFragment();
-        fragmentTransaction.add(R.id.framelayout,gouMaiFragment);
+        gouMaiFragment = new GouMaiFragment();
+        fragmentTransaction.add(R.id.framelayout, gouMaiFragment);
 
         fragmentTransaction.show(gouMaiFragment);
 
@@ -64,18 +63,16 @@ public class XinXiActivity extends BaseActivity {
                 transaction = manager.beginTransaction();
                 hideAll(transaction);
 
-                switch (checkedId){
+                switch (checkedId) {
 
                     case R.id.goumai_but:
-
-                        Toast.makeText(XinXiActivity.this, "我购买的", Toast.LENGTH_SHORT).show();
 
                         if (gouMaiFragment == null) {
 
                             gouMaiFragment = new GouMaiFragment();
 
                             transaction.add(R.id.framelayout, gouMaiFragment);
-                        }else {
+                        } else {
 
                             transaction.show(gouMaiFragment);
                         }
@@ -83,14 +80,12 @@ public class XinXiActivity extends BaseActivity {
                         break;
                     case R.id.fabu_but:
 
-                        Toast.makeText(XinXiActivity.this, "我发布的", Toast.LENGTH_SHORT).show();
-
                         if (woFabuFragment == null) {
 
                             woFabuFragment = new WoFabuFragment();
 
                             transaction.add(R.id.framelayout, woFabuFragment);
-                        }else {
+                        } else {
 
                             transaction.show(woFabuFragment);
                         }
@@ -114,6 +109,5 @@ public class XinXiActivity extends BaseActivity {
 
             transaction.hide(gouMaiFragment);
         }
-
     }
 }

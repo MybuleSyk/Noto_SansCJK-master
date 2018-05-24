@@ -37,41 +37,60 @@
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <!--主页-->
         <activity android:name=".MainActivity">
 
-
-
         </activity>
-
+        <!--登录页面-->
         <activity android:name=".login.LoginActivity">
 
 
         </activity>
-
+        <!--个人-->
         <activity android:name=".person.activity.PersonalActivity"></activity>
+        <!--地址管理-->
         <activity android:name=".person.activity.AddressActivity"></activity>
+        <!--个人维修清单-->
         <activity android:name=".person.activity.RepairActivity"></activity>
+        <!--闲置页面-->
         <activity android:name=".person.activity.XianzhiActivity"></activity>
+        <!--我的优惠-->
         <activity android:name=".person.activity.YouhuiActivity"></activity>
+        <!--充值提现-->
         <activity android:name=".person.activity.ChongzhiActivity"></activity>
+        <!--意见反馈-->
         <activity android:name=".person.activity.YijianActivity"></activity>
+        <!--语音下单-->
         <activity android:name=".wrench.activity.YuyinActivity"></activity>
+        <!--视频下单-->
         <activity android:name=".wrench.activity.ShipingActivity"></activity>
+        <!--图文下单-->
         <activity android:name=".wrench.activity.TuwenAcitity"></activity>
+
         <activity android:name=".wrench.activity.XuanzeXHActivity"></activity>
+        <!--等待接单-->
         <activity android:name=".wrench.activity.DengdaiActivity"></activity>
+        <!--闲置详情-->
         <activity android:name=".trading.activity.XZxiangqingActivity"></activity>
+        <!--闲置发布-->
         <activity android:name=".trading.activity.FaBuActivity"></activity>
+        <!--闲置信息-->
         <activity android:name=".trading.activity.XinXiActivity"></activity>
+        <!--拍照-->
         <activity android:name=".wrench.activity.TakeptoActivity"
             ></activity>
+        <!--维修查询-->
         <activity android:name=".home.activity.WXchaxunActivity"></activity>
-
+        <!--店铺列表-->
         <activity android:name=".home.activity.ShoplistActivity"></activity>
+        <!--商品详情-->
         <activity android:name=".home.activity.ShopXXActivity"></activity>
+        <!--添加地址-->
         <activity android:name=".person.activity.AddAddressActivity"></activity>
-        <activity android:name=".AdvertisingActivity">
 
+        <!--这是启动广告页-->
+        <activity android:name=".AdvertisingActivity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

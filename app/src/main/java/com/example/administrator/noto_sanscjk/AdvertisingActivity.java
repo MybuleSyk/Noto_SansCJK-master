@@ -5,7 +5,6 @@ import android.os.CountDownTimer;
 import android.os.Handler;
 import android.view.View;
 import android.widget.TextView;
-
 import com.example.administrator.noto_sanscjk.base.BaseActivity;
 import com.example.administrator.noto_sanscjk.customize.IntentUtil;
 import com.example.administrator.noto_sanscjk.login.LoginActivity;
@@ -40,7 +39,7 @@ public class AdvertisingActivity extends BaseActivity {
                 startActivity(intent);
                 finish();
             }
-        }, 3000);
+        },3000);
     }
     private Handler handler=new Handler();
 /**

@@ -58,9 +58,6 @@ public class XuanzeXHActivity extends BaseActivity{
         // 一定要设置这个属性，否则ListView不会刷新
         initAdapter(mainList.get(0).getArea());
 
-
-
-
     }
 
     @Override
@@ -80,7 +77,7 @@ public class XuanzeXHActivity extends BaseActivity{
                 Toast.makeText(XuanzeXHActivity.this, s, Toast.LENGTH_SHORT).show();
                 moreAdapter.setSelectItem(position);
                 moreAdapter.notifyDataSetChanged();
-
+//变为手动输入这个就没有用了
 //                Intent intent=new Intent(XuanzeXHActivity.this,LoginActivity.class);
 //
 //                startActivity(intent);
